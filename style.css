@@ -1,0 +1,218 @@
+/* ベーススタイル（夜のバーをイメージしたダークトーン） */
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.8;
+}
+
+section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h2, h3 {
+    text-align: center;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+/* ヘッダー */
+.hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('images/header-bg.jpg') no-repeat center center/cover;
+    background-color: #1a1a1a; /* 画像がない場合のフォールバック */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    filter: grayscale(100%);
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: #fff;
+    letter-spacing: 4px;
+}
+
+.sub-title {
+    font-size: 1rem;
+    color: #aa9988;
+    margin-top: 10px;
+}
+
+/* おすすめ写真エリア */
+.concept {
+    text-align: center;
+}
+
+.recommend-images, .gallery-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.img-box {
+    flex: 1;
+    min-width: 280px;
+    text-align: center;
+}
+
+.img-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    background-color: #2a2a2a;
+}
+
+/* アクセス & マップ（2列レイアウト） */
+.info-container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.info-text, .info-graph {
+    flex: 1;
+    min-width: 300px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px 8px;
+    text-align: left;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+th {
+    width: 30%;
+    color: #aa9988;
+    white-space: nowrap;
+}
+
+/* フッター */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.8rem;
+    color: #666;
+    border-top: 1px solid #2a2a2a;
+}
+/* ロゴ画像のサイズ調整 */
+.logo {
+    max-width: 600px;  /* 横幅の上限（お好みで調整してください） */
+    width: 100%;       /* スマホ画面では自動で縮小 */
+    height: auto;
+}
+
+/* 地図画像のサイズ調整 */
+.map-img {
+    width: 100%;       /* エリアの幅いっぱいに広げる */
+    max-width: 500px;  /* パソコンで見た時の最大サイズ */
+    height: auto;
+    border-radius: 4px;/* 角を少し丸くする */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5); /* 軽い影をつける */
+    transition: opacity 0.2s;
+}
+
+/* 地図画像にホバーした時の演出（任意） */
+.map-img:hover {
+    opacity: 0.8;      /* マウスを乗せたときに少し透明にする */
+}
+/* Instagramエリアのスタイル */
+.instagram-section {
+    border-top: 1px solid #2a2a2a;
+}
+
+.insta-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.insta-qr img {
+    width: 160px;
+    height: 160px;
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.insta-text {
+    max-width: 400px;
+    text-align: left;
+}
+
+.insta-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: opacity 0.2s;
+}
+
+.insta-link:hover {
+    opacity: 0.9;
+}
+
+/* スマホ用の調整 */
+@media (max-width: 600px) {
+    .insta-container {
+        text-align: center;
+    }
+    .insta-text {
+        text-align: center;
+    }
+}
+/* 塩釜の小さなバーの文字装飾 */
+.sub-concept {
+    font-size: 1.1rem;
+    color: #aa9988;
+    margin-top: -10px;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+/* 一押しカクテルの強調デザイン */
+.recommend-images .img-box.highlighted {
+    border: 1px solid #aa9988;
+    padding: 10px;
+    background-color: #1a1a1a;
+    border-radius: 6px;
+    position: relative;
+    transform: scale(1.03); /* わずかに大きく表示 */
+}
+
+/* 一押しラベル */
+.pickup-label {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #aa9988;
+    color: #121212;
+    padding: 2px 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 3px;
+    margin: 0;
+}
